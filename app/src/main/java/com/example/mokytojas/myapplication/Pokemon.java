@@ -1,11 +1,13 @@
 package com.example.mokytojas.myapplication;
 
 public class Pokemon {
+    private int id;
     private String name;
     private double weight;
     private String cp;
     private String abilities;
     private String type;
+
 
     public Pokemon(String name, double weight, String cp, String abilities, String type) {
         this.name = name;
@@ -13,6 +15,20 @@ public class Pokemon {
         this.cp = cp;
         this.abilities = abilities;
         this.type = type;
+    }
+
+    //Sitas konstruktorius bus specialiai skirtas dirbti su db irasais.
+    public Pokemon(int id, String name, double weight, String cp, String abilities, String type) {
+        this.id = id;
+        this.name = name;
+        this.weight = weight;
+        this.cp = cp;
+        this.abilities = abilities;
+        this.type = type;
+    }
+
+    public int getId(){
+        return id;
     }
 
     public String getName() {
